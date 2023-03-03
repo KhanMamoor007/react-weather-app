@@ -12,13 +12,30 @@ body {
 .bg_img {
   width: 100%;
   min-height: 100vh;
-  background: url(images/bg.jpg) no-repeat center center/cover;
+  background: no-repeat center center/cover;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   color: #fff;
 }
+/* Background */
+.bg_thunderstorm {
+  background-image: url("./images/thunderstorm.jpg");
+}
+.bg_clouds {
+  background-image: url("./images/clouds.jpg");
+}
+.bg_snow {
+  background-image: url("./images/snow.jpg");
+}
+.bg_clear {
+  background-color: #ffc107;
+}
+.bg_hot {
+  background-image: url("./images/hot.jpg");
+}
+
 .input {
   background-color: rgba(255, 255, 255, 0.75);
 }

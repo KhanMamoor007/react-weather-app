@@ -35,8 +35,29 @@ function App() {
     }
   };
   console.log(data);
+
+  //background change
+
+  const getBackground = () => {
+    if (!data.weather) {
+      return "bg_img"; // default background image
+    }
+    const temperature = data.main.temp;
+    if (temperature < 0) {
+      return "bg_snow";
+    } else if (temperature < 10) {
+      return "bg_thunderstorm";
+    } else if (temperature < 20) {
+      return "bg_clouds";
+    } else if (temperature < 30) {
+      return "bg_hot";
+    } else {
+      return "bg_hot";
+    }
+  };
+
   return (
-    <div className="bg_img">
+    <div className={`bg_img ${getBackground()} `}>
       {!loading ? (
         <>
           <TextField
